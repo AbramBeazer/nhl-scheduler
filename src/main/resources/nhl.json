@@ -1,0 +1,163 @@
+{
+  "name": "National Hockey League",
+  "conferences": [
+    {
+      "name": "Western Conference",
+      "divisions": [
+        {
+          "name": "Pacific Division",
+          "teams": [
+            {
+              "location": "Seattle",
+              "name": "Kraken"
+            },
+            {
+              "location": "Vancouver",
+              "name": "Canucks"
+            },
+            {
+              "location": "Edmonton",
+              "name": "Oilers"
+            },
+            {
+              "location": "Calgary",
+              "name": "Flames"
+            },
+            {
+              "location": "San Jose",
+              "name": "Sharks"
+            },
+            {
+              "location": "Los Angeles",
+              "name": "Kings"
+            },
+            {
+              "location": "Anaheim",
+              "name": "Ducks"
+            },
+            {
+              "location": "Vegas",
+              "name": "Golden Knights"
+            }
+          ]
+        },
+        {
+          "name": "Central Division",
+          "teams": [
+            {
+              "location": "Arizona",
+              "name": "Coyotes"
+            },
+            {
+              "location": "Colorado",
+              "name": "Avalanche"
+            },
+            {
+              "location": "Dallas",
+              "name": "Stars"
+            },
+            {
+              "location": "St. Louis",
+              "name": "Blues"
+            },
+            {
+              "location": "Nashville",
+              "name": "Predators"
+            },
+            {
+              "location": "Winnipeg",
+              "name": "Jets"
+            },
+            {
+              "location": "Minnesota",
+              "name": "Wild"
+            },
+            {
+              "location": "Chicago",
+              "name": "Blackhawks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eastern Conference",
+      "divisions": [
+        {
+          "name": "Metropolitan Division",
+          "teams": [
+            {
+              "location": "Pittsburgh",
+              "name": "Penguins"
+            },
+            {
+              "location": "Columbus",
+              "name": "Blue Jackets"
+            },
+            {
+              "location": "Philadelphia",
+              "name": "Flyers"
+            },
+            {
+              "location": "New Jersey",
+              "name": "Devils"
+            },
+            {
+              "location": "New York",
+              "name": "Rangers"
+            },
+            {
+              "location": "New York",
+              "name": "Islanders"
+            },
+            {
+              "location": "Carolina",
+              "name": "Hurricanes"
+            },
+            {
+              "location": "Washington",
+              "name": "Capitals"
+            }
+          ]
+        },
+        {
+          "name": "Atlantic Division",
+          "teams": [
+            {
+              "location": "Florida",
+              "name": "Panthers"
+            },
+            {
+              "location": "Tampa Bay",
+              "name": "Lightning"
+            },
+            {
+              "location": "Boston",
+              "name": "Bruins"
+            },
+            {
+              "location": "Buffalo",
+              "name": "Sabres"
+            },
+            {
+              "location": "Ottawa",
+              "name": "Senators"
+            },
+            {
+              "location": "Montreal",
+              "name": "Canadiens"
+            },
+            {
+              "location": "Toronto",
+              "name": "Maple Leafs"
+            },
+            {
+              "location": "Detroit",
+              "name": "Red Wings"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
