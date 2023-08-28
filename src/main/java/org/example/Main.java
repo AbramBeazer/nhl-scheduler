@@ -140,8 +140,8 @@ public class Main {
             date = date.plusDays(1);
         }
 
-        final LocalDate penultimateDate = date.plusDays(2);
-        final LocalDate endOfRegularSeason = date.plusDays(3);
+        final LocalDate penultimateDate = date.plusDays(1);
+        final LocalDate endOfRegularSeason = date.plusDays(2);
         for (int i = 0; i < reservedMatchups.size(); i = i + 2) {
             scheduledGames.add(new Game(penultimateDate, reservedMatchups.get(i)));
         }
