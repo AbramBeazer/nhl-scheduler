@@ -46,6 +46,8 @@ public class Main {
     private static final LocalDate ALL_STAR_END = ALL_STAR_BEGIN.plusDays(6);
     private static final LocalDate SUPER_BOWL_SUNDAY = LocalDate.of(NEXT_YEAR, Month.FEBRUARY, 1)
         .with(TemporalAdjusters.dayOfWeekInMonth(2, DayOfWeek.SUNDAY));
+
+    private static final LocalDate END_SEASON_BY = LocalDate.of(NEXT_YEAR, Month.APRIL, 20);
     private static final int DIVISION_GAMES_PER_TEAM = 26;
     private static final int CONFERENCE_GAMES_PER_TEAM = 24;
     private static final int INTERCONFERENCE_GAMES_PER_TEAM = 32;
@@ -70,7 +72,12 @@ public class Main {
                     .flatMap(division -> division.getTeams().stream()))
                 .collect(
                     Collectors.toList());
-            List<Game> scheduledGames = scheduleGames(teams, matchups);
+
+            List<Game> scheduledGames;
+            do {
+                scheduledGames =
+                    scheduleGames(teams, matchups);
+            } while (scheduledGames.get(scheduledGames.size() - 1).getDate().isAfter(END_SEASON_BY));
 
             for (Game game : scheduledGames) {
                 System.out.println(game);
@@ -95,6 +102,17 @@ public class Main {
         for (int i = 0; i < teams.size(); i = i + 2) {
             final Team away = teams.get(i);
             final Team home = teams.get(i + 1);
+            Matchup match = matchups.stream()
+                .filter(m -> m.getAway().equals(away) && m.getHome().equals(home))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException(
+                    "Should have been able to find matchup between any two teams at start of process."));
+            reservedMatchups.add(match);
+        }
+
+        for (int i = 0; i < teams.size() / 2; i++) {
+            final Team away = teams.get(i);
+            final Team home = teams.get(i + (teams.size() / 2));
             Matchup match = matchups.stream()
                 .filter(m -> m.getAway().equals(away) && m.getHome().equals(home))
                 .findFirst()
@@ -140,13 +158,14 @@ public class Main {
             date = date.plusDays(1);
         }
 
-        final LocalDate penultimateDate = date.plusDays(1);
-        final LocalDate endOfRegularSeason = date.plusDays(2);
-        for (int i = 0; i < reservedMatchups.size(); i = i + 2) {
-            scheduledGames.add(new Game(penultimateDate, reservedMatchups.get(i)));
-        }
-        for (int i = 1; i < reservedMatchups.size(); i = i + 2) {
-            scheduledGames.add(new Game(endOfRegularSeason, reservedMatchups.get(i)));
+        date = date.plusDays(1);
+        for (int i = 0; i < reservedMatchups.size(); i++) {
+            if (i == reservedMatchups.size() / 4 || i == reservedMatchups.size() * 3 / 4) {
+                date = date.plusDays(1);
+            } else if (i == reservedMatchups.size() / 2) {
+                date = date.plusDays(2);
+            }
+            scheduledGames.add(new Game(date, reservedMatchups.get(i)));
         }
 
         return scheduledGames;
@@ -208,17 +227,17 @@ public class Main {
     private static int getNumberOfGamesToday(LocalDate date) {
         int games = 0;
         if (date.equals(OPENING_DAY)) {
-            games = 3;
+            return 3;
         } else if (date.equals(HALLOWEEN) || date.equals(SUPER_BOWL_SUNDAY)) {
-            games = 2;
+            return 2;
         } else if ((date.equals(CHRISTMAS_ADAM) && BOXING_DAY.getDayOfWeek().equals(DayOfWeek.SATURDAY))
             || date.equals(CHRISTMAS)
             || date.equals(CHRISTMAS_EVE)
             || (date.equals(BOXING_DAY) && !BOXING_DAY.getDayOfWeek().equals(DayOfWeek.SATURDAY))
             || (date.isAfter(ALL_STAR_BEGIN) && date.isBefore(ALL_STAR_END))) {
-            games = 0;
+            return 0;
         } else if (date.getDayOfWeek().equals(DayOfWeek.SUNDAY)) {
-            games = randomBetweenInclusive(3, 7);
+            games = randomBetweenInclusive(3, 8);
         } else if (date.getDayOfWeek().equals(DayOfWeek.MONDAY)) {
             games = randomBetweenInclusive(3, 8);
         } else if (date.getDayOfWeek().equals(DayOfWeek.TUESDAY)) {
