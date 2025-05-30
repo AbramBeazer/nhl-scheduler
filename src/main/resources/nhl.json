@@ -9,35 +9,43 @@
           "teams": [
             {
               "location": "Seattle",
-              "name": "Kraken"
+              "name": "Kraken",
+              "timeZone": "PST"
             },
             {
               "location": "Vancouver",
-              "name": "Canucks"
+              "name": "Canucks",
+              "timeZone": "PST"
             },
             {
               "location": "Edmonton",
-              "name": "Oilers"
+              "name": "Oilers",
+              "timeZone": "MST"
             },
             {
               "location": "Calgary",
-              "name": "Flames"
+              "name": "Flames",
+              "timeZone": "MST"
             },
             {
               "location": "San Jose",
-              "name": "Sharks"
+              "name": "Sharks",
+              "timeZone": "PST"
             },
             {
               "location": "Los Angeles",
-              "name": "Kings"
+              "name": "Kings",
+              "timeZone": "PST"
             },
             {
               "location": "Anaheim",
-              "name": "Ducks"
+              "name": "Ducks",
+              "timeZone": "PST"
             },
             {
               "location": "Vegas",
-              "name": "Golden Knights"
+              "name": "Golden Knights",
+              "timeZone": "PST"
             }
           ]
         },
@@ -46,35 +54,43 @@
           "teams": [
             {
               "location": "Utah",
-              "name": "Mammoth"
+              "name": "Mammoth",
+              "timeZone": "MST"
             },
             {
               "location": "Colorado",
-              "name": "Avalanche"
+              "name": "Avalanche",
+              "timeZone": "MST"
             },
             {
               "location": "Dallas",
-              "name": "Stars"
+              "name": "Stars",
+              "timeZone": "CST"
             },
             {
               "location": "St. Louis",
-              "name": "Blues"
+              "name": "Blues",
+              "timeZone": "CST"
             },
             {
               "location": "Nashville",
-              "name": "Predators"
+              "name": "Predators",
+              "timeZone": "CST"
             },
             {
               "location": "Winnipeg",
-              "name": "Jets"
+              "name": "Jets",
+              "timeZone": "CST"
             },
             {
               "location": "Minnesota",
-              "name": "Wild"
+              "name": "Wild",
+              "timeZone": "CST"
             },
             {
               "location": "Chicago",
-              "name": "Blackhawks"
+              "name": "Blackhawks",
+              "timeZone": "CST"
             }
           ]
         }
@@ -88,35 +104,43 @@
           "teams": [
             {
               "location": "Pittsburgh",
-              "name": "Penguins"
+              "name": "Penguins",
+              "timeZone": "EST"
             },
             {
               "location": "Columbus",
-              "name": "Blue Jackets"
+              "name": "Blue Jackets",
+              "timeZone": "EST"
             },
             {
               "location": "Philadelphia",
-              "name": "Flyers"
+              "name": "Flyers",
+              "timeZone": "EST"
             },
             {
               "location": "New Jersey",
-              "name": "Devils"
+              "name": "Devils",
+              "timeZone": "EST"
             },
             {
               "location": "New York",
-              "name": "Rangers"
+              "name": "Rangers",
+              "timeZone": "EST"
             },
             {
               "location": "New York",
-              "name": "Islanders"
+              "name": "Islanders",
+              "timeZone": "EST"
             },
             {
               "location": "Carolina",
-              "name": "Hurricanes"
+              "name": "Hurricanes",
+              "timeZone": "EST"
             },
             {
               "location": "Washington",
-              "name": "Capitals"
+              "name": "Capitals",
+              "timeZone": "EST"
             }
           ]
         },
@@ -125,35 +149,43 @@
           "teams": [
             {
               "location": "Florida",
-              "name": "Panthers"
+              "name": "Panthers",
+              "timeZone": "EST"
             },
             {
               "location": "Tampa Bay",
-              "name": "Lightning"
+              "name": "Lightning",
+              "timeZone": "EST"
             },
             {
               "location": "Boston",
-              "name": "Bruins"
+              "name": "Bruins",
+              "timeZone": "EST"
             },
             {
               "location": "Buffalo",
-              "name": "Sabres"
+              "name": "Sabres",
+              "timeZone": "EST"
             },
             {
               "location": "Ottawa",
-              "name": "Senators"
+              "name": "Senators",
+              "timeZone": "EST"
             },
             {
               "location": "Montreal",
-              "name": "Canadiens"
+              "name": "Canadiens",
+              "timeZone": "EST"
             },
             {
               "location": "Toronto",
-              "name": "Maple Leafs"
+              "name": "Maple Leafs",
+              "timeZone": "EST"
             },
             {
               "location": "Detroit",
-              "name": "Red Wings"
+              "name": "Red Wings",
+              "timeZone": "EST"
             }
           ]
         }
