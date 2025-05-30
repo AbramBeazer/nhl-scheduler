@@ -1,13 +1,12 @@
 package org.example;
 
-import java.nio.file.CopyOption;
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Game implements Comparable<Game> {
 
     private LocalDate date;
+    //TODO: Add time based on time zone of home team.
     private Matchup matchup;
 
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd");
