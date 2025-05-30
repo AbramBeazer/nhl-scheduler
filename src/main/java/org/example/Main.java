@@ -79,13 +79,16 @@ public class Main {
                     scheduleGames(teams, matchups);
             } while (scheduledGames.get(scheduledGames.size() - 1).getDate().isAfter(END_SEASON_BY));
 
-            for (Game game : scheduledGames) {
-                System.out.println(game);
-            }
+            writeToExcel(scheduledGames);
+
             System.out.println("\nTotal games: " + scheduledGames.size());
         } catch (IOException e) {
             LOG.error(e.toString());
         }
+    }
+
+    private static void writeToExcel(List<Game> scheduledGames) throws IOException {
+        
     }
 
     private static List<Game> scheduleGames(List<Team> teams, List<Matchup> matchups) {
